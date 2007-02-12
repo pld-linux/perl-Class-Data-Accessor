@@ -6,7 +6,7 @@
 %define	pdir	Class
 %define	pnam	Data-Accessor
 Summary:	Class::Data::Accessor - Inheritable, overridable class and instance data accessor creation
-Summary(pl):	Class::Data::Accessor - tworzenie dziedzinych, przeci±¿alnych klas i dostêpu do instancji danych
+Summary(pl.UTF-8):   Class::Data::Accessor - tworzenie dziedzinych, przeciÄ…Å¼alnych klas i dostÄ™pu do instancji danych
 Name:		perl-Class-Data-Accessor
 Version:	0.02
 Release:	1
@@ -26,10 +26,10 @@ Class::Data::Inheritable into a single module. It is used for creating
 accessors to class data that overridable in subclasses as well as in
 class instances.
 
-%description -l pl
-Class::Data::Accessor to po³±czenie Class::Accessor i
-Class::Data::Inheritable w pojedynczy modu³. S³u¿y do tworzenia metod
-dostêpu do danych klasy przeci±¿alnych w podklasach, a tak¿e w
+%description -l pl.UTF-8
+Class::Data::Accessor to poÅ‚Ä…czenie Class::Accessor i
+Class::Data::Inheritable w pojedynczy moduÅ‚. SÅ‚uÅ¼y do tworzenia metod
+dostÄ™pu do danych klasy przeciÄ…Å¼alnych w podklasach, a takÅ¼e w
 instancjach klasy.
 
 %prep
