@@ -8,15 +8,14 @@
 Summary:	Class::Data::Accessor - Inheritable, overridable class and instance data accessor creation
 Summary(pl.UTF-8):	Class::Data::Accessor - tworzenie dziedzinych, przeciążalnych klas i dostępu do instancji danych
 Name:		perl-Class-Data-Accessor
-Version:	0.02
+Version:	0.04001
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Class/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	81d45455fa45f200c236bfdc38086e96
+# Source0-md5:	b5abdc508aaa600a82eaf4c1235a780c
 URL:		http://search.cpan.org/dist/Class-Data-Accessor/
-BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -38,17 +37,17 @@ instancjach klasy.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
+%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"Class::Data::Accessor")' \
+	INSTALLDIRS=vendor
+%{__make}
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
