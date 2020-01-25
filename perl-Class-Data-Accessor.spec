@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	Data-Accessor
 Summary:	Class::Data::Accessor - Inheritable, overridable class and instance data accessor creation
