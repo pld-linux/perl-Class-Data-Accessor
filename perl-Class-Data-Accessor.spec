@@ -8,7 +8,7 @@ Summary:	Class::Data::Accessor - Inheritable, overridable class and instance dat
 Summary(pl.UTF-8):	Class::Data::Accessor - tworzenie dziedzinych, przeciążalnych klas i dostępu do instancji danych
 Name:		perl-Class-Data-Accessor
 Version:	0.04004
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
